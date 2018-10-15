@@ -66,6 +66,7 @@ function draw() {
     } else {
       count = 0;
       special = 0;
+      death = 0;
     }
    }
 
@@ -85,9 +86,12 @@ function draw() {
    }
    }
 
-   if(death == 0 && special == 0) {
+   if(death == 0 && special < 2) {
      image(wolf, 100, 350);
-   } else {
+  if(death == 0 && special == 1){
+    image(wolf, 100, 350);
+    image(slash, 150, 350, 50, 200);
+  } } else {
      image(dead, 100, 450);
    }
 
